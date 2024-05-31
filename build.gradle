@@ -2,6 +2,9 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.3.0'
     id 'io.spring.dependency-management' version '1.1.5'
+
+//    id 'com.gorylenko.gradle-git-properties:gradle-git-properties:2.4.1'
+    id 'com.gorylenko.gradle-git-properties' version '2.4.1'
 }
 
 group = 'com.cashwu'
@@ -9,6 +12,14 @@ version = '0.0.1-SNAPSHOT'
 
 java {
     sourceCompatibility = '17'
+}
+
+springBoot {
+    buildInfo()
+}
+
+gitProperties {
+    failOnNoGitDirectory = false
 }
 
 configurations {

@@ -1,0 +1,81 @@
+@host=http://localhost:8080
+
+### home
+
+GET {{host}}
+
+### all actuator endpoint
+
+GET {{host}}/actuator
+
+
+### info
+
+GET {{host}}/actuator/info
+
+### health
+
+GET {{host}}/actuator/health
+
+### beans
+
+GET {{host}}/actuator/beans
+
+
+### conditions
+
+GET {{host}}/actuator/conditions
+
+
+### env
+
+GET {{host}}/actuator/env
+
+
+### mappings / app endpoint
+
+GET {{host}}/actuator/mappings
+
+
+### loggers
+
+GET {{host}}/actuator/loggers
+
+
+### threaddump
+
+GET {{host}}/actuator/threaddump
+
+
+
+### metrics
+
+GET {{host}}/actuator/metrics
+
+
+### metrics - system.cpu.count
+
+GET {{host}}/actuator/metrics/system.cpu.count
+
+
+
+### metrics - home
+
+GET {{host}}/actuator/metrics/home
+
+
+
+### notes
+
+GET {{host}}/actuator/notes
+
+
+### create notes
+
+
+POST {{host}}/actuator/notes
+Content-Type: application/json
+
+{
+  "text" : "123"
+}
